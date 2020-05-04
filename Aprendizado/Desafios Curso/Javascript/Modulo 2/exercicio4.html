@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto" /> 
+    <button name="btn" id="exc" onclick="preencherLista()">Cadastrar Lista</button>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        var i=0;
+        function preencherLista()
+        {
+        var inp = document.getElementById('texto');
+        var textinp = inp.value;
+        
+
+        var nomes = [];
+        nomes[i] = textinp;
+            var createLi = document.createElement('li');
+            var indentul = document.getElementById('lista')
+            indentul.appendChild(createLi);
+            var exprimeiro = document.querySelectorAll('li')[i];
+            var txtprimeiro = document.createTextNode(nomes[i]);
+            exprimeiro.appendChild(txtprimeiro);
+
+            console.log(i);
+            i = i+1;
+
+            inp.value = "";
+            
+        }
+        
+        
+
+
+    </script>
+    
+</body>
+</html>

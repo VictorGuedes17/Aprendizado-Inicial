@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button name="btn" id="exc" onclick="exibirN()">Clique para Executar</button>
+    </div>
+
+    <script>
+
+        function exibirN()
+        {
+            var createDiv = document.createElement('div');
+            createDiv.setAttribute('id','ex');
+            createDiv.style.backgroundColor = 'red';
+            createDiv.style.width = '100px';
+            createDiv.style.height = '100px';
+
+            var preencher = document.getElementById('app');
+            
+            preencher.appendChild(createDiv);
+
+            function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+
+        createDiv.onmouseover = function()
+        {
+            createDiv.style.backgroundColor = newColor;
+        }
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

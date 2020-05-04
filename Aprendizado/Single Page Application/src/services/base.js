@@ -1,0 +1,2 @@
+export const URL_API1 = "http://www.devup.com.br/php/api-dashboard/api";
+export const URL_API2 = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=PETR4.sa&outputsize=full&apikey=4ABH0QOGZYTBQ3AQ";

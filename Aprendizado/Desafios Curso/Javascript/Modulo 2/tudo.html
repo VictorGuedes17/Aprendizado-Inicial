@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="txt" id="texto"/>
+        <button name="btn" id="btn" onclick="aplicar()">Clique Aqui</button>
+        <p>
+    </div>
+
+    <script>
+        var i=0
+        var pos = 20;
+        var ultpos;
+        function aplicar()
+        {
+           
+            var inp = document.getElementById('texto');
+            var meutexto = document.createTextNode(inp.value);
+
+            var createDiv = document.createElement('div');
+            function propdiv(){
+            createDiv.setAttribute('id',i)
+            createDiv.setAttribute('align','center');
+            createDiv.style.position = '20px';
+            createDiv.style.marginLeft = pos+'px';
+            createDiv.style.width = '100px';
+            createDiv.style.height = '100px';
+            createDiv.style.backgroundColor = 'black';
+            createDiv.style.color = 'red';
+            }
+
+            propdiv();
+
+            
+            var container = document.getElementById('app');
+            container.appendChild(createDiv);
+
+            var procuradiv = document.getElementById(i);
+            procuradiv.appendChild(meutexto);
+
+            i = i+1;
+            ultpos = pos;
+
+            if(pos==20)
+            {
+                pos = pos+100;
+            }
+            else if(pos==120)
+            {
+                pos = pos-100;
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

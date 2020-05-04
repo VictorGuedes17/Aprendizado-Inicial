@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "app1">
+        <button name='btn' id = 'exc' onclick='criarbtntxt()'>Clique para Gerar</button>
+    </div>
+    <div id = "app">
+       
+    </div>
+    <script>
+    
+
+    function criarbtntxt()
+    {
+        
+    var cadInput = document.createElement('input');
+    cadInput.setAttribute('name','nomedoinput');
+    var procurabtn = document.getElementById('exc');
+    var cadBtn = document.createElement('button');
+    cadBtn.setAttribute('name','btn');
+    cadBtn.setAttribute('onclick','gerarAlerta()');
+
+    var txtBtn = document.createTextNode('Passe o Mouse');
+    cadBtn.appendChild(txtBtn);
+
+    var posdiv = document.querySelector("#app");
+    posdiv.style.marginTop = "50px";
+    
+    var corpo = document.querySelector("body");
+    corpo.style.backgroundColor = "yellow";
+
+    cadBtn.onmouseover = function()
+    {
+        cadBtn.style.color = "red";
+    }
+
+    cadBtn.onclick = function()
+    {
+        var meutexto = cadInput.value;
+        alert(meutexto);
+    }
+    
+
+    var del = document.getElementById('app1');
+    del.removeChild(procurabtn);
+    var exibicao = document.getElementById('app');
+    exibicao.appendChild(cadBtn);  
+    exibicao.appendChild(cadInput);
+    }
+
+    </script>
+</body>
+</html>
