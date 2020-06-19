@@ -1,0 +1,36 @@
+body{
+    background-color: green;
+}
+
+.container{
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2rem;
+    font-weight: bold;
+    
+}
+
+.container .formulario {
+    max-width: 260px;
+    padding: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .formulario input{
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-style: double;
+    border-radius: 5px;
+}
+
+.container .formulario button{
+    width: 260px;
+    height: 30px;
+    background-color: yellow;
+    border: none;
+    border-style: double;
+    border-radius: 5px;
+}

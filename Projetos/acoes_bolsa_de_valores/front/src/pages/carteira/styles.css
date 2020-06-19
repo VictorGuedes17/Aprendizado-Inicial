@@ -1,0 +1,80 @@
+
+article{
+    display: none;
+}
+table {
+    font: 100% sans-serif;
+    border-collapse: collapse;
+    empty-cells: show;
+    border: 1px solid #7a7;
+    }
+  
+  table > caption {
+    text-align: left;
+    font-weight: bold;
+    font-size: 200%;
+    border-bottom: .2em solid #4ca;
+    margin-bottom: .5em;
+    }
+  
+  
+  /* basic shared rules */
+  table th,
+  table td {
+    border: 1px solid #7a7;
+    text-align: center;
+    padding-right: .5em;
+    }
+  
+  table th {
+    font-weight: bold;
+    padding-left: .5em;
+    }
+  
+  
+  /* header */
+  table > thead > tr:first-child > th {
+    text-align: center;
+    color: blue;
+    }
+  
+  table > thead > tr + tr > th {
+    font-style: italic;
+    color: gray;
+    }
+  
+  /* fix size of superscript */
+  table sup {
+    font-size: 75%;
+    }
+  
+  /* body */
+  table td {
+    padding:.5em .5em .5em 0.5em;
+    }
+  
+  table tbody th:after {
+    content: ":";
+    }
+  
+  
+  /* footer */
+  table tfoot {
+    font-weight: bold;
+    }
+  
+  table tfoot th {
+    color: blue;
+    }
+  
+  table tfoot th:after {
+    content: ":";
+    }
+  
+  table > tfoot td {
+    background-color: #cee;
+    }
+  
+  table > tfoot > tr:first-child td {
+    border-top: .2em solid #7a7;
+    }
